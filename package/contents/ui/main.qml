@@ -7,11 +7,12 @@ import org.kde.plasma.plasmoid
 
 PlasmoidItem {
     id: page
-    width: Kirigami.Units.gridUnit * 12.6
     height: childrenRect.height
+    width: Kirigami.Units.gridUnit * 12.6
     preferredRepresentation: compactRepresentation
     compactRepresentation: null
 	fullRepresentation: Item {
+        width: Kirigami.Units.gridUnit * 12.6
         Plasma5Support.DataSource {
             id: executable
             engine: "executable"
@@ -37,45 +38,38 @@ PlasmoidItem {
         }
         Column {
             anchors.fill: parent
+            spacing: 0
             width: Kirigami.Units.gridUnit * 12.6
-            spacing: 0 
-            padding: 0
             PlasmaComponents.ToolButton {
                 text: "About this computer"
-                padding: 0
                 onClicked: {
                     executable.exec("kinfocenter")
                 }
                 width: Kirigami.Units.gridUnit * 12.6
             }
             PlasmaComponents.MenuSeparator {
-                
+                width: Kirigami.Units.gridUnit * 12.6
             }
             PlasmaComponents.ToolButton {
                 text: "System Preferences..."
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 anchors.left: parent.left
-                anchors.margins: 0
-                x: 0
                 onClicked: {
                     executable.exec("systemsettings")
                 }
             }
             PlasmaComponents.ToolButton {
                 text: "App Store..."
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("plasma-discover")
                 }
             }
             PlasmaComponents.MenuSeparator {
-                
+                width: Kirigami.Units.gridUnit * 12.6
             }
             PlasmaComponents.ToolButton {
                 text: "Force Quit..."
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("xkill")
@@ -87,11 +81,10 @@ PlasmoidItem {
                 }
             }
             PlasmaComponents.MenuSeparator {
-
+                width: Kirigami.Units.gridUnit * 12.6
             }
             PlasmaComponents.ToolButton {
                 text: "Sleep"
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("systemctl suspend")
@@ -99,7 +92,6 @@ PlasmoidItem {
             }
             PlasmaComponents.ToolButton {
                 text: "Restart..."
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("reboot")
@@ -107,18 +99,16 @@ PlasmoidItem {
             }
             PlasmaComponents.ToolButton {
                 text: "Shut Down..."
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("shutdown now")
                 }
             }
             PlasmaComponents.MenuSeparator {
-
+                width: Kirigami.Units.gridUnit * 12.6
             }
             PlasmaComponents.ToolButton {
                 text: "Lock Screen"
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("qdbus org.kde.ksmserver /ScreenSaver org.freedesktop.ScreenSaver.Lock")
@@ -131,7 +121,6 @@ PlasmoidItem {
             }
             PlasmaComponents.ToolButton {
                 text: "Log Out"
-                padding: 0
                 width: Kirigami.Units.gridUnit * 12.6
                 onClicked: {
                     executable.exec("qdbus org.kde.ksmserver /KSMServer logout 0 0 0")

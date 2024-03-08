@@ -15,5 +15,6 @@
         "Website": "https://github.com/YAndrii27/Corner-Menu"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API": "declarativeappletscript",
     "KPackageStructure": "Plasma/Applet"
 }
