@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "AndriiYashchishen@protonmail.com",
+                "Name": "Andrii Yashchishen"
+            }
+        ],
+        "Category": "Tasks",
+        "Description": "Corner menu",
+        "Icon": "configure",
+        "Id": "com.github.yandrii27.corner-menu",
+        "Name": "Corner Menu 6.0`",
+        "Version": "1",
+        "Website": "https://github.com/YAndrii27/Corner-Menu"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPackageStructure": "Plasma/Applet"
+}
